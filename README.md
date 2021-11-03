@@ -2,7 +2,9 @@
 
 ## Running Cypress UI Tests
 
-https://github.com/jasonogayon/autochecks-ts-cypress/blob/master/docs/11032021-test-report.mp4
+https://user-images.githubusercontent.com/8307613/140059947-d2ea7301-5c2b-40c0-874a-a0eed52421f0.mp4
+
+---
 
 ### Headlessly
 
