@@ -2,9 +2,7 @@
 
 ## Running Cypress UI Tests
 
-<video width="480" height="240" controls>
-  <source src="./docs/11032021-test-report.mp4" type="video/mp4">
-</video>
+![Sample Mochawesome Test Video Recording](./docs/11032021-test-report.mp4)
 
 ### Headlessly
 
