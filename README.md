@@ -2,7 +2,7 @@
 
 ## Running Cypress UI Tests
 
-![Sample Mochawesome Test Video Recording](./docs/11032021-test-report.mp4)
+https://github.com/jasonogayon/autochecks-ts-cypress/blob/master/docs/11032021-test-report.mp4
 
 ### Headlessly
 
