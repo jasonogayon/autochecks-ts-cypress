@@ -1,0 +1,18 @@
+{
+  "name": "autochecks-ts-cypress-todomvc-react",
+  "version": "1.0.0",
+  "description": "ToDoMVC React Automated Checks using Typescript and Cypress",
+  "main": "index.js",
+  "scripts": {
+    "cy": "./node_modules/.bin/cypress open",
+    "test": "./node_modules/.bin/cypress run"
+  },
+  "author": "Jason Ogayon",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^8.7.0",
+    "cypress-mochawesome-reporter": "^2.3.0",
+    "cypress-xpath": "^1.6.2",
+    "typescript": "^4.4.4"
+  }
+}

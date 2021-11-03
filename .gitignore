@@ -1,0 +1,16 @@
+*.DS_Store
+*.pdf
+*.log
+*.html
+.env
+.archive
+
+cypress/videos
+cypress/downloads
+cypress/report
+
+build/
+mochawesome-report/
+node_modules/
+output/
+package-lock.json
