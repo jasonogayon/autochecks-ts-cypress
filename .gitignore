@@ -13,4 +13,3 @@ build/
 mochawesome-report/
 node_modules/
 output/
-package-lock.json
