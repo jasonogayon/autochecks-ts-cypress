@@ -1,4 +1,4 @@
-# ToDoMVC React Automated Checks using Typescript and Cypress
+# ToDoMVC React Automated Checks using Typescript and Cypress [![CircleCI](https://circleci.com/gh/jasonogayon/autochecks-ts-cypress/tree/master.svg?style=svg)](https://circleci.com/gh/jasonogayon/autochecks-ts-cypress/tree/master)
 
 ## Running Cypress UI Tests
 
