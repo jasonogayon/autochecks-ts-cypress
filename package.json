@@ -5,11 +5,13 @@
   "main": "index.js",
   "scripts": {
     "cy": "./node_modules/.bin/cypress open",
-    "test": "./node_modules/.bin/cypress run"
+    "test": "./node_modules/.bin/cypress run",
+    "bs": "./node_modules/.bin/browserstack-cypress run --sync"
   },
   "author": "Jason Ogayon",
   "license": "ISC",
   "dependencies": {
+    "browserstack-cypress-cli": "^1.11.0",
     "cypress": "^8.7.0",
     "cypress-mochawesome-reporter": "^2.3.0",
     "cypress-xpath": "^1.6.2",

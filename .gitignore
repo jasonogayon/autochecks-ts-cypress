@@ -13,3 +13,5 @@ build/
 mochawesome-report/
 node_modules/
 output/
+log/
+results/

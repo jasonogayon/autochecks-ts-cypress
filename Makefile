@@ -38,7 +38,7 @@ h:
 
 bs:
 	@echo "Running tests ..."; echo ""
-	@yarn run test:browserstack
+	@yarn run bs
 
 
 
