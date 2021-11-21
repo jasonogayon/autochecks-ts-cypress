@@ -2,9 +2,12 @@
 
 const { beforeRunHook, afterRunHook } = require('cypress-mochawesome-reporter/lib');
 const { lighthouse, prepareAudit } = require('cypress-audit');
+const getCompareSnapshotsPlugin = require('cypress-visual-regression/dist/plugin');
+
 
 
 module.exports = (on, config) => {
+  getCompareSnapshotsPlugin(on, config);
 
   on('before:run', async (details) => {
     console.log('override before:run');
@@ -14,10 +17,6 @@ module.exports = (on, config) => {
 
   on('before:browser:launch', (browser = {}, launchOptions) => {
     prepareAudit(launchOptions);
-        if (browser.name === 'chrome' && browser.isHeadless) {
-      launchOptions.args.push('--disable-gpu');
-      return launchOptions;
-    }
   });
 
   on('task', {

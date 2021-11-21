@@ -33,13 +33,15 @@ s:
 	@npm run cy
 
 h:
-	@echo "Running tests ..."; echo "";
+	@echo "Running tests with visual checks..."; echo "";
 	@yarn run test
 
 bs:
 	@echo "Running tests ..."; echo ""
 	@yarn run bs
 
+snapshots:
+	@yarn run snapshots
 
 
 

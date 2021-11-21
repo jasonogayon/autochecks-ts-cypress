@@ -8,6 +8,8 @@
 cypress/videos
 cypress/downloads
 cypress/report
+cypress/snapshots/actual
+cypress/snapshots/diff
 
 build/
 mochawesome-report/

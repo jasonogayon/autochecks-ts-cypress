@@ -5,8 +5,10 @@
         "types": [
             "cypress",
             "cypress-xpath",
-            "cypress-audit"
+            "cypress-audit",
+            "cypress-visual-regression/dist/plugin",
+            "node"
         ]
     },
-    "include": ["**/*.ts"]
+    "include": ["**/*.ts", "plugins/index.js", "support/index.js", "support/commands.js"]
 }

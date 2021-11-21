@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "cy": "./node_modules/.bin/cypress open",
-    "test": "./node_modules/.bin/cypress run",
-    "bs": "./node_modules/.bin/browserstack-cypress run --sync"
+    "test": "./node_modules/.bin/cypress run --env type=actual",
+    "bs": "./node_modules/.bin/browserstack-cypress run --sync",
+    "snapshots": "./node_modules/.bin/cypress run --env type=base --config screenshotsFolder=cypress/snapshots/base"
   },
   "author": "Jason Ogayon",
   "license": "ISC",
@@ -15,6 +16,7 @@
     "cypress": "^8.7.0",
     "cypress-audit": "^1.1.0",
     "cypress-mochawesome-reporter": "^2.3.0",
+    "cypress-visual-regression": "^1.6.3",
     "cypress-xpath": "^1.6.2",
     "typescript": "^4.4.4"
   }

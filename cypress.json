@@ -5,6 +5,11 @@
         "charts": true,
         "reportPageTitle": "custom-title",
         "embeddedScreenshots": true
+    },
+    "screenshotsFolder": "./cypress/snapshots/actual",
+    "trashAssetsBeforeRuns": true,
+    "env": {
+        "failSilently": false
     }
 }
 
