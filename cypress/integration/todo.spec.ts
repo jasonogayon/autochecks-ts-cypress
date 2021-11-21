@@ -36,8 +36,7 @@ describe('ToDos', () => {
     // Check that Number of Items Left is Correct
     cy.get(spanTodoCount).should('have.text', '1 item left')
 
-    // Visual Test
-    cy.compareSnapshot('add-a-single-to-do', snapshot)
+    if (Cypress.env('visual')) cy.compareSnapshot('add-a-single-to-do', snapshot)
   })
 
 
@@ -57,8 +56,7 @@ describe('ToDos', () => {
     // Check that Number of Items Left is Correct
     cy.get(spanTodoCount).should('have.text', `${todos.length} items left`)
 
-    // Visual Test
-    cy.compareSnapshot('add-multiple-to-do', snapshot)
+    if (Cypress.env('visual')) cy.compareSnapshot('add-multiple-to-do', snapshot)
   })
 
 
@@ -73,8 +71,7 @@ describe('ToDos', () => {
     // Check that Todo is Removed
     cy.xpath(listTodos).should('have.length', 0)
 
-    // Visual Test
-    cy.compareSnapshot('remove-a-to-do', snapshot)
+    if (Cypress.env('visual')) cy.compareSnapshot('remove-a-to-do', snapshot)
   })
 
 
@@ -92,8 +89,7 @@ describe('ToDos', () => {
     // Check that Todo is Updated
     cy.xpath(listTodos).should('have.length', 1).should('have.text', newTodo)
 
-    // Visual Test
-    cy.compareSnapshot('edit-a-to-do', snapshot)
+    if (Cypress.env('visual')) cy.compareSnapshot('edit-a-to-do', snapshot)
   })
 
 
@@ -111,8 +107,7 @@ describe('ToDos', () => {
     // Check that Todo is Marked as Completed
     cy.xpath(`//li[.='${todo}']`).should('have.attr', 'class', 'completed')
 
-    // Visual Test
-    cy.compareSnapshot('mark-a-to-do-as-completed', snapshot)
+    if (Cypress.env('visual')) cy.compareSnapshot('mark-a-to-do-as-completed', snapshot)
 
     // Mark Todo as Active
     cy.xpath(`//li[.='${todo}']${toggleComplete}`).uncheck()
@@ -120,8 +115,7 @@ describe('ToDos', () => {
     // Check that Todo is Marked as Active
     cy.xpath(`//li[.='${todo}']`).should('not.have.attr', 'class', 'completed')
 
-    // Visual Test
-    cy.compareSnapshot('mark-a-to-do-as-active', snapshot)
+    if (Cypress.env('visual')) cy.compareSnapshot('mark-a-to-do-as-active', snapshot)
   })
 
 
@@ -145,8 +139,7 @@ describe('ToDos', () => {
       cy.xpath(`//li[.='${todo}']`).should('have.attr', 'class', 'completed')
     })
 
-    // Visual Test
-    cy.compareSnapshot('mark-all-to-dos-as-completed', snapshot)
+    if (Cypress.env('visual')) cy.compareSnapshot('mark-all-to-dos-as-completed', snapshot)
 
     // Mark All Todos as Active
     cy.xpath(toggleAll).click()
@@ -156,8 +149,7 @@ describe('ToDos', () => {
       cy.xpath(`//li[.='${todo}']`).should('not.have.attr', 'class', 'completed')
     })
 
-    // Visual Test
-    cy.compareSnapshot('mark-all-to-dos-as-active', snapshot)
+    if (Cypress.env('visual')) cy.compareSnapshot('mark-all-to-dos-as-active', snapshot)
   })
 
 
@@ -166,8 +158,7 @@ describe('ToDos', () => {
     cy.get(inputNewTodo).should('have.text', '')
     cy.get(inputNewTodo).should('have.attr', 'placeholder', 'What needs to be done?')
 
-    // Visual Test
-    cy.compareSnapshot('placeholder-todo', snapshot)
+    if (Cypress.env('visual')) cy.compareSnapshot('placeholder-todo', snapshot)
   })
 
 
@@ -186,15 +177,13 @@ describe('ToDos', () => {
     cy.xpath(linkCompleted).click()
     cy.xpath(listTodos).should('have.length', 1).should('have.text', randomTodo)
 
-    // Visual Test
-    cy.compareSnapshot('view-only-completed', snapshot)
+    if (Cypress.env('visual')) cy.compareSnapshot('view-only-completed', snapshot)
 
     // View Only Active Todos and Check that the Other Todos are Visible
     cy.xpath(linkActive).click()
     cy.xpath(listTodos).should('have.length', 2).should('not.have.text', randomTodo)
 
-    // Visual Test
-    cy.compareSnapshot('view-only-active', snapshot)
+    if (Cypress.env('visual')) cy.compareSnapshot('view-only-active', snapshot)
   })
 
 
@@ -222,8 +211,7 @@ describe('ToDos', () => {
     cy.xpath(linkActive).click()
     cy.xpath(`//li[.='${todo}']`).should('have.length', 1)
 
-    // Visual Test
-    cy.compareSnapshot('add-a-to-do-from-completed', snapshot)
+    if (Cypress.env('visual')) cy.compareSnapshot('add-a-to-do-from-completed', snapshot)
   })
 
 
