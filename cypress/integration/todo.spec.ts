@@ -188,5 +188,41 @@ describe('ToDos', () => {
   })
 
 
+  it('Run a performance audit via Lighthouse with custom thresholds', () => {
+    const thresholds = {
+      'performance': 60,
+      'accessibility': 60,
+      'seo': 60,
+      'pwa': 0,
+      'best-practices': 60,
+      'first-contentful-paint': 2000,
+      'largest-contentful-paint': 5000,
+      'cumulative-layout-shift': 0.1,
+      'total-blocking-time': 500,
+    };
+
+    const config = {
+      formFactor: "desktop",
+      screenEmulation: {
+        width: 1350,
+        height: 940,
+        deviceScaleRatio: 1,
+        mobile: false,
+        disable: false,
+      },
+      throttling: {
+        rttMs: 40,
+        throughputKbps: 11024,
+        cpuSlowdownMultiplier: 1,
+        requestLatencyMs: 0,
+        downloadThroughputKbps: 0,
+        uploadThroughputKbps: 0,
+      },
+    };
+
+    cy.lighthouse(thresholds, config);
+  });
+
+
 
 })
